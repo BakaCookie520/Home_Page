@@ -210,9 +210,10 @@ GitHub Actions 配置文件可参考[个人项目主页](https://github.com/SRIn
    git tag v1.0.0
    git push origin v1.0.0
    ```
-2. 工作流自动执行，构建镜像并推送到 `ghcr.io/<您的用户名>/home-page:v1.0.0`
+2. 工作流自动执行，构建镜像并推送到 `ghcr.io/<您的用户名>/<仓库名>:<标签>`
+   - 例如：如果您的仓库名为 `Home_Page`，标签为 `v1.0.0`，镜像将推送到 `ghcr.io/<您的用户名>/home_page:v1.0.0`
 
-**镜像名称格式：** `ghcr.io/<owner>/<repo>:<tag>`
+**镜像名称格式：** `ghcr.io/<owner>/<repository-name>:<tag>`
 
 工作流配置文件位于 `.github/workflows/docker-build-push.yml`
 
